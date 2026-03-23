@@ -436,16 +436,39 @@ nav {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  max-width: min(680px, 90%);
+  max-width: min(510px, 90%);
   width: 100%;
   border: 1px solid rgba(184,150,62,0.45);
   box-shadow: 0 16px 64px rgba(0,0,0,0.55), 0 0 0 1px rgba(184,150,62,0.15);
   border-radius: 2px;
-  overflow: hidden;
+  overflow: visible;
 }
 .hero-banner-float img {
   width: 100%;
   display: block;
+  border-radius: 2px;
+}
+.hero-banner-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 28px;
+  height: 28px;
+  background: var(--gold);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 16px;
+  line-height: 1;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  z-index: 11;
+}
+.hero-banner-close:hover {
+  background: var(--gold-light);
 }
 @keyframes scrollPulse {
   0%, 100% { opacity: 0.4; }
@@ -1387,7 +1410,8 @@ footer {
         </div>
       </div>
     </div>
-    <div class="hero-banner-float">
+    <div class="hero-banner-float" id="heroBanner">
+      <button class="hero-banner-close" onclick="document.getElementById('heroBanner').style.display='none'" aria-label="Fechar banner">✕</button>
       <img src="https://i.postimg.cc/SxJsLxFx/banner-site-mariaux.jpg" alt="Banner Colégio Maria Auxiliadora">
     </div>
     <div class="hero-scroll">
