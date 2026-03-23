@@ -306,10 +306,6 @@ nav {
 .hero {
   min-height: 100vh;
   background: var(--navy);
-  background-image: url('https://i.postimg.cc/SxJsLxFx/banner-site-mariaux.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex; align-items: center;
   position: relative;
   overflow: hidden;
@@ -318,7 +314,6 @@ nav {
 .hero-bg-pattern {
   position: absolute; inset: 0;
   background-image:
-    linear-gradient(to right, rgba(13,37,69,0.85) 0%, rgba(13,37,69,0.6) 60%, rgba(13,37,69,0.45) 100%),
     radial-gradient(circle at 80% 20%, rgba(184,150,62,0.07) 0%, transparent 50%),
     radial-gradient(circle at 10% 80%, rgba(26,58,107,0.5) 0%, transparent 50%);
 }
@@ -434,6 +429,23 @@ nav {
   width: 1px; height: 40px;
   background: linear-gradient(to bottom, var(--gold), transparent);
   animation: scrollPulse 2s ease-in-out infinite;
+}
+.hero-banner-float {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  max-width: min(680px, 90%);
+  width: 100%;
+  border: 1px solid rgba(184,150,62,0.45);
+  box-shadow: 0 16px 64px rgba(0,0,0,0.55), 0 0 0 1px rgba(184,150,62,0.15);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.hero-banner-float img {
+  width: 100%;
+  display: block;
 }
 @keyframes scrollPulse {
   0%, 100% { opacity: 0.4; }
@@ -1374,6 +1386,9 @@ footer {
           <p>Trabalhamos com os pais, não no lugar deles. A escola reforça o que você ensina em casa.</p>
         </div>
       </div>
+    </div>
+    <div class="hero-banner-float">
+      <img src="https://i.postimg.cc/SxJsLxFx/banner-site-mariaux.jpg" alt="Banner Colégio Maria Auxiliadora">
     </div>
     <div class="hero-scroll">
       <div class="hero-scroll-line"></div>
